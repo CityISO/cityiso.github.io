@@ -8,12 +8,12 @@
 
     <!-- Site Properties -->
     <title>Homepage - Semantic</title>
-    <link rel="stylesheet" type="text/css" href="Semantic-UI/dist/semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="font/Whitney.css">
+    <link rel="stylesheet" type="text/css" href="./dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="./font/Whitney.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
-    <script src="Semantic-UI/dist/semantic.min.js"></script>
+    <script src="./dist/semantic.min.js"></script>
 
     <style type="text/css">
 
@@ -24,6 +24,30 @@
         .masthead.segment {
             min-height: 700px;
             padding: 1em 0em;
+        }
+
+        .masthead:after {
+            background-image: url(./data/Picture.png);
+            -ms-transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
+            -moz-transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
+            -webkit-transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
+            transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
+        }
+
+        .masthead:after {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background-size: cover;
+            opacity: 0.45;
+        }
+
+        .masthead.after-masthead:after {
+            z-index: 999;
         }
 
         .masthead .logo.item img {
@@ -125,6 +149,9 @@
     <script src="../dist/components/sidebar.js"></script>
     <script src="../dist/components/transition.js"></script>
     <script>
+        window.addEventListener('load', () => {
+            document.querySelector('.masthead').classList.add('after-masthead');
+        });
         $(document)
             .ready(function () {
 
@@ -171,19 +198,8 @@
 
 <!-- Page Contents -->
 <div class="pusher">
-    <div class="ui inverted vertical masthead center aligned segment" style="
-    background-image: url(data/Picture.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background: rgba(0,0,0,0.9);
-    background: -moz-linear-gradient(top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 28%, rgba(0,0,0,0) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.9)), color-stop(28%, rgba(0,0,0,0.9)), color-stop(100%, rgba(0,0,0,0)));
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 28%, rgba(0,0,0,0) 100%);
-    background: -o-linear-gradient(top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 28%, rgba(0,0,0,0) 100%);
-    background: -ms-linear-gradient(top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 28%, rgba(0,0,0,0) 100%);
-    background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 28%, rgba(0,0,0,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );">
-
+    <div class="ui inverted vertical masthead center aligned segment">
+        <div class="overlay"></div>
         <div class="ui container">
             <div class="ui large secondary inverted pointing menu">
                 <a class="toc item">
