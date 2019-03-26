@@ -1,0 +1,215 @@
+body, html {
+    overflow: hidden;
+}
+
+body {
+    font: 100% / 1.5 Arial;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.parallax {
+    font-size: 200%;
+}
+
+/* centre the content in the parallax layers */
+.title {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+/* style the groups
+--------------------------------------------- */
+
+#group1 {
+    z-index: 5; /* slide over group 2 */
+}
+
+#group1 .parallax__layer--base {
+    background-image: url("data/New-Yourk.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#group2 {
+    z-index: 3; /* slide under groups 1 and 3 */
+}
+
+#group2 .parallax__layer--back {
+    background-image: url("data/Picture.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#group3 {
+    z-index: 4; /* slide over group 2 and 4 */
+}
+
+#group3 .parallax__layer--base {
+    background: #9b9b9b;
+}
+
+#group4 {
+    z-index: 2; /* slide under group 3 and 5 */
+}
+
+#group4 .parallax__layer--deep {
+    background: #383838;
+}
+
+#group5 {
+    z-index: 3; /* slide over group 4 and 6 */
+}
+
+#group5 .parallax__layer--base {
+    background: #9b9b9b;
+}
+
+#group6 {
+    z-index: 2; /* slide under group 5 and 7 */
+}
+
+#group6 .parallax__layer--back {
+    background: #565656;
+}
+
+#group7 {
+    z-index: 3; /* slide over group 7 */
+}
+
+#group7 .parallax__layer--base {
+    background: #9b9b9b;
+}
+
+
+/* misc
+--------------------------------------------- */
+.demo__info {
+    position: absolute;
+    z-index: 100;
+    bottom: 1vh;
+    top: auto;
+    font-size: 80%;
+    text-align: center;
+    width: 100%;
+}
+
+
+.link a {
+    display: block; /* Ссылка как блочный элемент */
+    text-align: center; /* Выравнивание по центру */
+    height: 100%; /* Высота на весь слой */
+    color: #666; /* Цвет ссылки */
+}
+
+html {
+    overflow-y: hidden;
+}
+
+.hidden.menu {
+    display: none;
+}
+
+/*.masthead.segment {*/
+/*min-height: 700px;*/
+/*padding: 1em 0em;*/
+/*}*/
+
+.masthead .logo.item img {
+    margin-right: 1em;
+}
+
+.masthead .ui.menu .ui.button {
+    margin-left: 0.5em;
+}
+
+.masthead h1.ui.header {
+    margin-top: 3em;
+    margin-bottom: 0em;
+    font-size: 4em;
+    font-weight: normal;
+}
+
+.masthead h2 {
+    font-size: 1.7em;
+    font-weight: normal;
+}
+
+.ui.vertical.stripe {
+    padding: 8em 0em;
+}
+
+.ui.vertical.stripe h3 {
+    font-size: 2em;
+}
+
+.ui.vertical.stripe .button + h3,
+.ui.vertical.stripe p + h3 {
+    margin-top: 3em;
+}
+
+.ui.vertical.stripe .floated.image {
+    clear: both;
+}
+
+.ui.vertical.stripe p {
+    font-size: 1.33em;
+}
+
+.ui.vertical.stripe .horizontal.divider {
+    margin: 3em 0em;
+}
+
+.quote.stripe.segment {
+    padding: 0em;
+}
+
+.quote.stripe.segment .grid .column {
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.footer.segment {
+    padding: 5em 0em;
+}
+
+.secondary.pointing.menu .toc.item {
+    display: none;
+}
+
+@media only screen and (max-width: 700px) {
+    .ui.fixed.menu {
+        display: none !important;
+    }
+
+    .secondary.pointing.menu .item,
+    .secondary.pointing.menu .menu {
+        display: none;
+    }
+
+    .secondary.pointing.menu .toc.item {
+        display: block;
+    }
+
+    .masthead.segment {
+        min-height: 350px;
+    }
+
+    .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+    }
+
+    .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+    }
+}
