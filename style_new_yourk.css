@@ -7,6 +7,9 @@
         visibility: visible;
         display: inherit !important;
     }
+    #top_menu{
+        background-image: url(data/New-Yourk.jpg);
+    }
 }
 @media (min-width: 1200px) {
     #chart_div{
@@ -17,6 +20,14 @@
         visibility: hidden;
         display: none;
     }
+    #top_menu{
+        background-image: url(data/Picture.png);
+    }
+}
+
+#top_menu{
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 html {

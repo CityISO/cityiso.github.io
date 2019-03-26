@@ -7,15 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
     <!-- Site Properties -->
-    <title>Homepage - Semantic</title>
-    <link rel="stylesheet" type="text/css" href="./dist/semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="./font/Whitney.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin="anonymous"></script>
-    <script src="./dist/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="font/Whitney.css">
+    <script src="jQuery.js"></script>
+    <script src="dist/semantic.min.js"></script>
 
     <style type="text/css">
+
+        html{
+            overflow-y: hidden;
+        }
 
         .hidden.menu {
             display: none;
@@ -24,30 +25,6 @@
         .masthead.segment {
             min-height: 700px;
             padding: 1em 0em;
-        }
-
-        .masthead:after {
-            background-image: url(./data/Picture.png);
-            -ms-transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
-            -moz-transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
-            -webkit-transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
-            transition: background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s, opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s;
-        }
-
-        .masthead:after {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            z-index: -1;
-            width: 100%;
-            height: 100%;
-            content: '';
-            background-size: cover;
-            opacity: 0.45;
-        }
-
-        .masthead.after-masthead:after {
-            z-index: 999;
         }
 
         .masthead .logo.item img {
@@ -144,14 +121,7 @@
 
     </style>
 
-    <script src="assets/library/jquery.min.js"></script>
-    <script src="../dist/components/visibility.js"></script>
-    <script src="../dist/components/sidebar.js"></script>
-    <script src="../dist/components/transition.js"></script>
     <script>
-        window.addEventListener('load', () => {
-            document.querySelector('.masthead').classList.add('after-masthead');
-        });
         $(document)
             .ready(function () {
 
@@ -176,6 +146,7 @@
             })
         ;
     </script>
+    <title>Образ города</title>
 </head>
 <body>
 
@@ -191,32 +162,39 @@
 <!-- Sidebar Menu -->
 <div class="ui vertical inverted sidebar menu">
     <a class="active item">Главная</a>
-    <a class="item">Статистика</a>
+    <a class="item" href="statistics.html">Статистика</a>
     <a class="item">О нас</a>
 </div>
 
 
 <!-- Page Contents -->
 <div class="pusher">
-    <div class="ui inverted vertical masthead center aligned segment">
-        <div class="overlay"></div>
+    <div class="ui inverted vertical masthead center aligned segment" style="
+    background-image: url(data/Picture.png);
+    background-repeat: no-repeat;
+    background-size: cover;">
+
         <div class="ui container">
             <div class="ui large secondary inverted pointing menu" style="border-color: transparent;">
-                <a class="tocs item">
+                <a class="toc item">
                     <i class="sidebar icon"></i>
                 </a>
                 <a class="active item">Главная</a>
-                <a class="item">Статистика</a>
+                <a class="item" href="statistics.html">Статистика</a>
                 <a class="item">О нас</a>
             </div>
         </div>
 
-        <div class="ui text container">
+        <div class="ui text container" style="
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;">
             <h1 class="ui inverted header">
                 Образ города
             </h1>
-            <h2>Do whatever you want when you want to.</h2>
-            <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
+            <h2>Анализ эмоционального состояния в городе</h2>
+            <a class="ui huge primary button" href="statistics.html">Посмотреть статистику <i class="right arrow icon"></i></a>
         </div>
 
     </div>
@@ -225,20 +203,20 @@
         <div class="ui middle aligned stackable grid container">
             <div class="row">
                 <div class="eight wide column">
-                    <h3 class="ui header">We Help Companies and Companions</h3>
-                    <p>We can give your company superpowers to do things that they never thought possible. Let us
-                        delight your customers and empower your needs...through pure data analytics.</p>
-                    <h3 class="ui header">We Make Bananas That Can Dance</h3>
-                    <p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-                        bioengineered.</p>
+                    <h3 class="ui header">Какой - то заголовок</h3>
+                    <p>Какой - то текст. Какой - то текст. Какой - то текст. Какой - то текст. Какой - то текст.
+                    Какой - то текст. Какой - то текст. Какой - то текст. Какой - то текст.</p>
+                    <h3 class="ui header">Какой - то заголовок</h3>
+                    <p>Какой - то текст. Какой - то текст. Какой - то текст. Какой - то текст. Какой - то текст.
+                    Какой - то текст. Какой - то текст.</p>
                 </div>
                 <div class="six wide right floated column">
-                    <img src="assets/images/wireframe/white-image.png" class="ui large bordered rounded image">
+                    <!--<img src="assets/images/wireframe/white-image.png" class="ui large bordered rounded image">-->
                 </div>
             </div>
             <div class="row">
                 <div class="center aligned column">
-                    <a class="ui huge button">Check Them Out</a>
+                    <a class="ui huge button">Кнопка</a>
                 </div>
             </div>
         </div>
@@ -249,14 +227,13 @@
         <div class="ui equal width stackable internally celled grid">
             <div class="center aligned row">
                 <div class="column">
-                    <h3>"What a Company"</h3>
-                    <p>That is what they all say about us</p>
+                    <h3>Что - то</h3>
+                    <p>Что - то</p>
                 </div>
                 <div class="column">
-                    <h3>"I shouldn't have gone with their competitor."</h3>
+                    <h3>Что - то</h3>
                     <p>
-                        <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer
-                        Acme Toys
+                        <!--<img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b></b> Что - то-->
                     </p>
                 </div>
             </div>
@@ -265,18 +242,18 @@
 
     <div class="ui vertical stripe segment">
         <div class="ui text container">
-            <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-            <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing
-                nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic
-                and worth your attention.</p>
-            <a class="ui large button">Read More</a>
+            <h3 class="ui header">Что - то</h3>
+            <p>Какой - то текст. Какой - то текст. Какой - то текст. Какой - то текст. Какой - то текст.
+                    Какой - то текст. Какой - то текст. Какой - то текст. Какой - то текст.Какой - то текст. Какой - то текст. Какой - то текст. Какой - то текст. Какой - то текст.
+                    Какой - то текст. Какой - то текст. Какой - то текст. Какой - то текст.</p>
+            <a class="ui large button">Что - то</a>
             <h4 class="ui horizontal header divider">
-                <a href="#">Case Studies</a>
+                <a href="#">Заголовок</a>
             </h4>
-            <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
-            <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really
-                true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
-            <a class="ui large button">I'm Still Quite Interested</a>
+            <h3 class="ui header">Что - то</h3>
+            <p>Какой - то текст. Какой - то текст. Какой - то текст. Какой - то текст. Какой - то текст.
+                    Какой - то текст. Какой - то текст. Какой - то текст. Какой - то текст.</p>
+            <a class="ui large button">Кнопка</a>
         </div>
     </div>
 
