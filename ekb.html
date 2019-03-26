@@ -9,10 +9,9 @@
     <!-- Site Properties -->
     <link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="font/Whitney.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin="anonymous"></script>
+    <script src="jQuery.js"></script>
     <script src="dist/semantic.min.js"></script>
+    <script src="script.js"></script>
 
     <style type="text/css">
 
@@ -122,11 +121,6 @@
 
 
     </style>
-
-    <script src="assets/library/jquery.min.js"></script>
-    <script src="dist/components/visibility.js"></script>
-    <script src="dist/components/sidebar.js"></script>
-    <script src="dist/components/transition.js"></script>
     <script>
         $(document)
             .ready(function () {
@@ -168,15 +162,34 @@
 <!-- Sidebar Menu -->
 <div class="ui vertical inverted sidebar menu">
     <a class="item" href="../index.html">Главная</a>
-    <a class="active item">Статистика</a>
+    <a class="active item" href="/statistics.html">Статистика</a>
     <a class="item">О нас</a>
 </div>
 
 
 <!-- Page Contents -->
 <div class="pusher">
-    <div class="center aligned segment">
+    <div class="ui inverted vertical masthead center aligned segment" style="
+    background-image: url(data/Picture.png);
+    background-repeat: no-repeat;
+    background-size: cover;">
+
+        <div class="ui container">
+            <div class="ui large secondary inverted pointing menu" style="border-color: transparent;">
+                <a class="toc item">
+                    <i class="sidebar icon"></i>
+                </a>
+                <a class="item" href="index.html">Главная</a>
+                <a class="active item" href="statistics.html">Статистика</a>
+                <a class="item">О нас</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="ui center aligned container">
         <h1>Екатеринбург</h1>
+        <h3>Настроение в городе: <span style="color: #BF3030;">70%</span></h3>
+        <button class="ui inverted violet button">Статистика за последние 2 дня</button>
     </div>
 </div>
 </body>

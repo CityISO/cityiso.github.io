@@ -9,9 +9,7 @@
     <!-- Site Properties -->
     <link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="font/Whitney.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin="anonymous"></script>
+    <script src="jQuery.js"></script>
     <script src="dist/semantic.min.js"></script>
 
     <style type="text/css">
@@ -129,11 +127,6 @@
 
 
     </style>
-
-    <script src="assets/library/jquery.min.js"></script>
-    <script src="dist/components/visibility.js"></script>
-    <script src="dist/components/sidebar.js"></script>
-    <script src="dist/components/transition.js"></script>
     <script>
         $(document)
             .ready(function () {
@@ -200,7 +193,7 @@
     </div>
     <br><br><br><br><br>
     <div class="ui link cards center aligned grid" style="">
-        <div class="card">
+        <div class="card" onclick="return location.href = window.location.href.split('/').slice(0, -1) .join('/')+ '/ekb.html'">
             <div class="image">
                 <img src="data/ekaterinburg.jpg">
             </div>
