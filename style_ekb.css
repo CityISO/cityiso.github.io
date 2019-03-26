@@ -1,3 +1,24 @@
+@media (max-width: 767px) {
+    #chart_div{
+        visibility: hidden;
+        display: none;
+    }
+    #table_statistics{
+        visibility: visible;
+        display: inherit !important;
+    }
+}
+@media (min-width: 1200px) {
+    #chart_div{
+        visibility: visible;
+        display: inherit !important;
+    }
+    #table_statistics{
+        visibility: hidden;
+        display: none;
+    }
+}
+
 html {
     overflow-y: hidden;
 }
