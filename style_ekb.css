@@ -1,13 +1,3 @@
-#level_mood {
-    visibility: visible;
-}
-
-@media handheld {
-    #level_mood {
-        visibility: hidden;
-    }
-}
-
 html {
     overflow-y: hidden;
 }
